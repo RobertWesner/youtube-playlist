@@ -19,8 +19,8 @@
                     <button class="btn btn-primary rounded-end-pill shadow-sm " type="submit">Fetch</button>
                 </div>
             </form>
-            <div id="error-log" class="alert alert-danger" role="alert" hidden=""></div>
-            <div>
+            <div id="error-log" class="alert alert-danger shadow-sm" role="alert" hidden=""></div>
+            <div class="bg-white p-3 shadow-sm rounded">
                 <table id="viewer" class="table">
                     <thead>
                         <tr>
@@ -40,21 +40,23 @@
                             Copy selection
                         </button>
                     </div>
-                    <ul class="pagination float-end">
-                        <li class="page-item">
+                    <div class="float-end d-flex">
+                        <ul class="pagination">
+                            <li class="page-item">
                             <span id="page-previous" class="page-link text-dark user-select-none">
                                 <span aria-hidden="true">&laquo;</span>
                             </span>
-                        </li>
-                        <li class="page-item">
-                            <input id="page-input" class="form-control rounded-0" value="1">
-                        </li>
-                        <li class="page-item">
+                            </li>
+                            <li class="page-item">
+                                <input id="page-input" class="form-control rounded-0" value="1" size="7">
+                            </li>
+                            <li class="page-item">
                             <span id="page-next" class="page-link text-dark user-select-none">
                                 <span>&raquo;</span>
                             </span>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </main>
