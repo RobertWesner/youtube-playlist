@@ -16,9 +16,10 @@ window.addEventListener('load', () => {
     let items = [];
     let maxResults = 10000;
     let page = 1;
+    let slice = [];
     const showTable = () => {
         const first = (page - 1) * maxResults;
-        const slice = items.slice(first, first + maxResults);
+        slice = items.slice(first, first + maxResults);
 
         const tbody = table.querySelector('tbody');
         tbody.textContent = '';
@@ -37,7 +38,6 @@ window.addEventListener('load', () => {
              * }} item
              */
             item => {
-                console.log(item);
                 const tr = document.createElement('tr');
                 const indexTd = document.createElement('td');
                 const linkTd = document.createElement('td');
@@ -53,7 +53,6 @@ window.addEventListener('load', () => {
                 tbody.append(tr);
             }
         );
-        console.log(slice);
     };
 
     document.querySelector('form').addEventListener('submit', event => {
@@ -98,15 +97,37 @@ window.addEventListener('load', () => {
         showTable();
     });
 
-    document.querySelector('#page-previous').addEventListener('click', event => {
+    document.querySelector('#page-previous').addEventListener('click', () => {
         page = Math.max(1, page - 1);
         pageInput.value = page;
         showTable();
     });
 
-    document.querySelector('#page-next').addEventListener('click', event => {
+    document.querySelector('#page-next').addEventListener('click', () => {
         page = page + 1;
         pageInput.value = page;
         showTable();
+    });
+
+    document.querySelector('#copy-btn').addEventListener('click', event => {
+        navigator.clipboard.writeText(
+            slice.map(
+                /**
+                 * @param {{
+                 *  snippet: {
+                 *      resourceId: {
+                 *          videoId: string,
+                 *      }
+                 *  }
+                 * }} item
+                 */
+                item => `https://youtube.com/watch?v=${item.snippet.resourceId.videoId}`,
+            ).join('\n')
+        );
+
+        event.target.textContent = 'Copied!';
+        setTimeout(() => {
+            event.target.textContent = 'Copy selection';
+        }, 3000);
     });
 });
