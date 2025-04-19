@@ -1,8 +1,6 @@
 services:
     web:
         image: nginx:latest
-        ports:
-            - '80:80'
         volumes:
             - ./:/var/www/html
             - ./docker/web/default.conf:/etc/nginx/conf.d/default.conf
@@ -15,7 +13,3 @@ services:
             dockerfile: docker/php-fpm/Dockerfile
         volumes:
             - ./:/var/www/html
-            - /var/run/docker.sock:/var/run/docker.sock
-        privileged: true
-        cap_add:
-            - SYS_ADMIN

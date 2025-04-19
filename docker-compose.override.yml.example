@@ -1,9 +1,4 @@
 services:
     web:
-        ports: !override
+        ports:
             - '8080:80'
-
-    php-fpm:
-        volumes:
-            - /var/run/docker.sock:/var/run/docker.sock
-            - /opt:/opt

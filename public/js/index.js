@@ -94,12 +94,12 @@ window.addEventListener('load', () => {
     });
 
     document.querySelector('#page-input').addEventListener('input', event => {
-        page = Math.min(1, parseInt(event.target.value));
+        page = Math.max(1, parseInt(event.target.value));
         showTable();
     });
 
     document.querySelector('#page-previous').addEventListener('click', event => {
-        page = Math.min(1, page - 1);
+        page = Math.max(1, page - 1);
         pageInput.value = page;
         showTable();
     });
