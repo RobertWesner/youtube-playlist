@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% include 'base/head.twig' with { title: 'YouTube Playlist Viewer' } %}
+        <link rel="stylesheet" href="/css/view/index.css">
+        <script type="module" src="/js/index.js"></script>
+    </head>
+    <body class="bg-light">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand text-center" href="/"><h1 class="h4">YouTube Playlist Viewer with pagination</h1></a>
+            </div>
+        </nav>
+        <main class="container p-3">
+            <form class="mb-3">
+                <div class="input-group mb-3 w-75 m-auto">
+                    <label class="input-group-text 3 rounded-start-pill shadow-sm border-end-0" for="input-playlist">Channel or playlist</label>
+                    <input id="input-playlist" class="form-control w-50 m-auto p- shadow-sm" name="playlist" type="text" placeholder="https://www.youtube.com/playlist?list=...">
+                    <button class="btn btn-primary rounded-end-pill shadow-sm " type="submit">Fetch</button>
+                </div>
+            </form>
+            <div id="error-log" class="alert alert-danger" role="alert" hidden=""></div>
+            <div>
+                <table id="viewer" class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Video</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div>
+                    <div class="input-group d-inline-flex w-auto">
+                        <span class="input-group-text">Limit</span>
+                        <input id="limit" class="form-control" type="text" value="10000">
+                    </div>
+                    <ul class="pagination float-end">
+                        <li class="page-item">
+                            <span id="page-previous" class="page-link text-dark">
+                                <span aria-hidden="true">&laquo;</span>
+                            </span>
+                        </li>
+                        <li class="page-item">
+                            <input id="page-input" class="form-control" value="1">
+                        </li>
+                        <li class="page-item">
+                            <span id="page-next" class="page-link text-dark">
+                                <span>&raquo;</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+@import '/font/montserrat/Montserrat.css';
+@import '/node_modules/@fortawesome/fontawesome-free/css/all.css';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    color: #29292a;
+    min-height: 100%;
+    margin: 0;
+
+    --color-primary: #2221ff;
+}

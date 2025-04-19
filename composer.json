@@ -1,0 +1,27 @@
+{
+    "name": "robertwesner/scripts.yt",
+    "description": "",
+    "type": "project",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "RobertWesner",
+            "email": "robert@wesner.io"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "robertwesner/simple-mvc-php": "^v0.5.0",
+        "vlucas/phpdotenv": "^5.6",
+        "google/apiclient": "^2.18"
+    },
+    "replace": {
+        "symfony/polyfill-php80": "*",
+        "symfony/polyfill-php81": "*"
+    }
+}
