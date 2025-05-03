@@ -9,7 +9,7 @@
 <meta name="keywords" content="YouTube, Playlist, Viewer, Pagination{% for keyword in keywords|default([]) %}, {{ keyword }}{% endfor %}">
 <meta name="robots" content="index, follow">
 <link rel="author" href="https://github.com/RobertWesner/" />
-<link rel="canonical" href="https://youtube-playlist.com{{ server.uri }}" />
+<link rel="canonical" href="https://ytplaylist.robert.wesner.io{{ server.uri }}" />
 {# </META> #}
 {# <OG> #}
 <meta property="og:title" content="{{ title }}">
@@ -17,8 +17,8 @@
 {% if image|default(null) %}
 <meta property="og:image" content="/{{ image }}">
 {% endif %}
-<meta property="og:url" content="https://youtube-playlist.com{{ server.uri }}">
-<meta property="og:site_name" content="youtube-playlist.com">
+<meta property="og:url" content="https://ytplaylist.robert.wesner.io{{ server.uri }}">
+<meta property="og:site_name" content="ytplaylist.robert.wesner.io">
 <meta property="og:type" content="website">
 {# </OG> #}
 {# <Twitter> #}
@@ -28,7 +28,7 @@
 {% if image|default(null) %}
     <meta name="twitter:image" content="/{{ image }}">
 {% endif %}
-<meta name="twitter:url" content="https://youtube-playlist.com{{ server.uri }}">
+<meta name="twitter:url" content="https://ytplaylist.robert.wesner.io{{ server.uri }}">
 {# </Twitter> #}
 <link rel="stylesheet" href="/css/theme.css">
 <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
