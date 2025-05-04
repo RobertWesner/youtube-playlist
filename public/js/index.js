@@ -27,14 +27,9 @@ window.addEventListener('load', () => {
         slice.forEach(
             /**
              * @param {{
-             *  snippet: {
-             *      position: number,
-             *      title: string,
-             *      description: string,
-             *      resourceId: {
-             *          videoId: string,
-             *      }
-             *  }
+             *  position: number,
+             *  title: string,
+             *  videoId: string,
              * }} item
              */
             item => {
@@ -45,10 +40,10 @@ window.addEventListener('load', () => {
                 tr.append(indexTd, linkTd);
                 linkTd.append(link);
 
-                indexTd.textContent = (item.snippet.position + 1).toString();
-                link.href = 'https://youtube.com/watch?v=' + item.snippet.resourceId.videoId;
+                indexTd.textContent = (item.position + 1).toString();
+                link.href = 'https://youtube.com/watch?v=' + item.videoId;
                 link.target = '_blank'
-                link.textContent = item.snippet.title;
+                link.textContent = item.title;
 
                 tbody.append(tr);
             }
@@ -81,8 +76,12 @@ window.addEventListener('load', () => {
         )
             .then(response => response.json())
             .then(response => {
-                items = response.items;
-                showTable();
+                if (response.status === 'running') {
+                    error('Playlist is very large and will be fetched in the background, please retry in 10 seconds.');
+                } else {
+                    items = response.items;
+                    showTable();
+                }
             });
     });
 
@@ -114,14 +113,10 @@ window.addEventListener('load', () => {
             slice.map(
                 /**
                  * @param {{
-                 *  snippet: {
-                 *      resourceId: {
-                 *          videoId: string,
-                 *      }
-                 *  }
+                 *  videoId: string,
                  * }} item
                  */
-                item => `https://youtube.com/watch?v=${item.snippet.resourceId.videoId}`,
+                item => `https://youtube.com/watch?v=${item.videoId}`,
             ).join('\n')
         );
 
