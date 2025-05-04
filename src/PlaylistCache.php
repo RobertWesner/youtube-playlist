@@ -29,6 +29,10 @@ final class PlaylistCache
 
     private function __construct()
     {
+        if (!is_dir(self::CACHE_DIR)) {
+            mkdir(self::CACHE_DIR, recursive: true);
+        }
+
         // clean up old caches
         foreach (array_diff(scandir(self::CACHE_DIR), ['.', '..']) as $file) {
             $file = self::CACHE_DIR . '/' . $file;
