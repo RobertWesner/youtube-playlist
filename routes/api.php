@@ -3,12 +3,15 @@
 use App\ApiKeyProvider;
 use App\PlaylistCache;
 use App\PlaylistService;
+use App\Spawn\Fetch\FetchSpawn;
+use App\Spawn\Fetch\FetchSpawnConfiguration;
 use Google\Client;
 use Google\Service\YouTube;
 use RobertWesner\SimpleMvcPhp\Route;
 use RobertWesner\SimpleMvcPhp\Routing\Request;
+use RobertWesner\SimpleMvcPhpSpawnerBundle\Spawner\Spawner;
 
-Route::post('/api/list', function (Request $request, ApiKeyProvider $apiKeyProvider) {
+Route::post('/api/list', function (Request $request, ApiKeyProvider $apiKeyProvider, Spawner $spawner) {
     $uri = $request->getRequestParameter('uri');
 
     $client = new Client();
@@ -42,8 +45,7 @@ Route::post('/api/list', function (Request $request, ApiKeyProvider $apiKeyProvi
         'id' => $list,
     ])->getItems()[0]->getContentDetails()->getItemCount();
     if ($videoCount >= 1000) {
-        $_ = [];
-        proc_close(proc_open('php ' . __DIR__ . '/../jobs/fetch.php ' . escapeshellarg($list) . ' &', [], $_));
+        $spawner->spawn(FetchSpawn::class, new FetchSpawnConfiguration($list));
 
         return Route::json([
             'status' => 'running',

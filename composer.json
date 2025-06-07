@@ -20,7 +20,8 @@
         "robertwesner/dependency-injection": "^v1.3.1",
         "google/apiclient": "^2.18",
         "matthiasmullie/scrapbook": "^1.5",
-        "league/flysystem-local": "^3.29"
+        "league/flysystem-local": "^3.29",
+        "robertwesner/simple-mvc-php-spawner-bundle": "^1.0"
     },
     "replace": {
         "symfony/polyfill-php80": "*",
