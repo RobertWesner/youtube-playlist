@@ -1,5 +1,6 @@
 <?php
 
+use App\ApiKeyProvider;
 use App\PlaylistCache;
 use App\PlaylistService;
 use Google\Client;
@@ -7,11 +8,11 @@ use Google\Service\YouTube;
 use RobertWesner\SimpleMvcPhp\Route;
 use RobertWesner\SimpleMvcPhp\Routing\Request;
 
-Route::post('/api/list', function (Request $request) {
+Route::post('/api/list', function (Request $request, ApiKeyProvider $apiKeyProvider) {
     $uri = $request->getRequestParameter('uri');
 
     $client = new Client();
-    $client->setDeveloperKey($_ENV['YOUTUBE_API_KEY']);
+    $client->setDeveloperKey($apiKeyProvider->getApiKey());
     $youtube = new YouTube($client);
 
     $list = null;

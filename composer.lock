@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "62424a0f05de16e524f7d3c6a374d141",
+    "content-hash": "144cb9b0e8b935212f97dd5f17d4f8b0",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -140,16 +140,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.396.0",
+            "version": "v0.397.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "ceb2e432e4326c6775d24f62d554395a1a9ad3dd"
+                "reference": "8366037e450b62ffc1c5489459f207640acca2b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/ceb2e432e4326c6775d24f62d554395a1a9ad3dd",
-                "reference": "ceb2e432e4326c6775d24f62d554395a1a9ad3dd",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/8366037e450b62ffc1c5489459f207640acca2b4",
+                "reference": "8366037e450b62ffc1c5489459f207640acca2b4",
                 "shasum": ""
             },
             "require": {
@@ -178,9 +178,9 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/google-api-php-client-services/issues",
-                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.396.0"
+                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.397.1"
             },
-            "time": "2025-02-24T01:10:27+00:00"
+            "time": "2025-06-04T17:28:44+00:00"
         },
         {
             "name": "google/auth",
@@ -516,16 +516,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.7.0",
+            "version": "2.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "a70f5c95fb43bc83f07c9c948baa0dc1829bf201"
+                "reference": "c2270caaabe631b3b44c85f99e5a04bbb8060d16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/a70f5c95fb43bc83f07c9c948baa0dc1829bf201",
-                "reference": "a70f5c95fb43bc83f07c9c948baa0dc1829bf201",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/c2270caaabe631b3b44c85f99e5a04bbb8060d16",
+                "reference": "c2270caaabe631b3b44c85f99e5a04bbb8060d16",
                 "shasum": ""
             },
             "require": {
@@ -612,7 +612,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.7.0"
+                "source": "https://github.com/guzzle/psr7/tree/2.7.1"
             },
             "funding": [
                 {
@@ -628,7 +628,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-18T11:15:46+00:00"
+            "time": "2025-03-27T12:30:47+00:00"
         },
         {
             "name": "league/flysystem",
@@ -1372,6 +1372,59 @@
             "time": "2021-02-03T23:26:27+00:00"
         },
         {
+            "name": "psr/container",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/container.git",
+                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/c71ecc56dfe541dbd90c5360474fbc405f8d5963",
+                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Container\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common Container Interface (PHP FIG PSR-11)",
+            "homepage": "https://github.com/php-fig/container",
+            "keywords": [
+                "PSR-11",
+                "container",
+                "container-interface",
+                "container-interop",
+                "psr"
+            ],
+            "support": {
+                "issues": "https://github.com/php-fig/container/issues",
+                "source": "https://github.com/php-fig/container/tree/2.0.2"
+            },
+            "time": "2021-11-05T16:47:00+00:00"
+        },
+        {
             "name": "psr/http-client",
             "version": "1.0.3",
             "source": {
@@ -1677,27 +1730,85 @@
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
-            "name": "robertwesner/simple-mvc-php",
-            "version": "v0.5.0",
+            "name": "robertwesner/dependency-injection",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RobertWesner/simple-mvc-php.git",
-                "reference": "de0c0ca735c09937b54ff7bc269ecb5942886518"
+                "url": "https://github.com/RobertWesner/dependency-injection.git",
+                "reference": "7b6377415adc874fb864211c695fa93ffab00e92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobertWesner/simple-mvc-php/zipball/de0c0ca735c09937b54ff7bc269ecb5942886518",
-                "reference": "de0c0ca735c09937b54ff7bc269ecb5942886518",
+                "url": "https://api.github.com/repos/RobertWesner/dependency-injection/zipball/7b6377415adc874fb864211c695fa93ffab00e92",
+                "reference": "7b6377415adc874fb864211c695fa93ffab00e92",
+                "shasum": ""
+            },
+            "require": {
+                "ext-simplexml": "*",
+                "php": ">=8.4",
+                "psr/container": "^2.0",
+                "softcreatr/jsonpath": "^0.9",
+                "symfony/yaml": "^7.2",
+                "vlucas/phpdotenv": "^5.6",
+                "yosymfony/toml": "^1.0"
+            },
+            "provide": {
+                "psr/container-implementation": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^12.1.3",
+                "squizlabs/php_codesniffer": "^3.10.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RobertWesner\\DependencyInjection\\": "src/",
+                    "RobertWesner\\DependencyInjection\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "RobertWesner",
+                    "email": "robert@wesner.io"
+                }
+            ],
+            "description": "A fun PSR-11 container implementation",
+            "support": {
+                "issues": "https://github.com/RobertWesner/dependency-injection/issues",
+                "source": "https://github.com/RobertWesner/dependency-injection/tree/v1.3.1"
+            },
+            "time": "2025-06-04T18:03:54+00:00"
+        },
+        {
+            "name": "robertwesner/simple-mvc-php",
+            "version": "v0.10.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RobertWesner/simple-mvc-php.git",
+                "reference": "9588e3761b60a125bfe2ac1f5af5b94b2de82c11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RobertWesner/simple-mvc-php/zipball/9588e3761b60a125bfe2ac1f5af5b94b2de82c11",
+                "reference": "9588e3761b60a125bfe2ac1f5af5b94b2de82c11",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/psr7": "^2.7",
-                "php": "^8.3",
+                "php": ">=8.4",
                 "twig/twig": "^3.19"
             },
             "require-dev": {
                 "phpunit/phpunit": "^11.3.1",
+                "robertwesner/dependency-injection": "^1.3.0",
                 "squizlabs/php_codesniffer": "^3.10.2"
+            },
+            "suggest": {
+                "robertwesner/dependency-injection": "^1.0.0"
             },
             "type": "library",
             "autoload": {
@@ -1719,22 +1830,91 @@
             "description": "A small library for creating PHP web servers.",
             "support": {
                 "issues": "https://github.com/RobertWesner/simple-mvc-php/issues",
-                "source": "https://github.com/RobertWesner/simple-mvc-php/tree/v0.5.0"
+                "source": "https://github.com/RobertWesner/simple-mvc-php/tree/v0.10.1"
             },
-            "time": "2025-02-25T17:50:27+00:00"
+            "time": "2025-06-04T17:44:01+00:00"
         },
         {
-            "name": "symfony/deprecation-contracts",
-            "version": "v3.5.1",
+            "name": "softcreatr/jsonpath",
+            "version": "0.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "74c71c939a79f7d5bf3c1ce9f5ea37ba0114c6f6"
+                "url": "https://github.com/SoftCreatR/JSONPath.git",
+                "reference": "272173a65fd16b25010dbd54d04dd34c0c5a8500"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/74c71c939a79f7d5bf3c1ce9f5ea37ba0114c6f6",
-                "reference": "74c71c939a79f7d5bf3c1ce9f5ea37ba0114c6f6",
+                "url": "https://api.github.com/repos/SoftCreatR/JSONPath/zipball/272173a65fd16b25010dbd54d04dd34c0c5a8500",
+                "reference": "272173a65fd16b25010dbd54d04dd34c0c5a8500",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "8.1 - 8.4"
+            },
+            "replace": {
+                "flow/jsonpath": "*"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.58",
+                "phpunit/phpunit": "10 - 12",
+                "squizlabs/php_codesniffer": "^3.10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Flow\\JSONPath\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stephen Frank",
+                    "email": "stephen@flowsa.com",
+                    "homepage": "https://prismaticbytes.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Sascha Greuel",
+                    "email": "hello@1-2.dev",
+                    "homepage": "https://1-2.dev",
+                    "role": "Developer"
+                }
+            ],
+            "description": "JSONPath implementation for parsing, searching and flattening arrays",
+            "support": {
+                "email": "hello@1-2.dev",
+                "forum": "https://github.com/SoftCreatR/JSONPath/discussions",
+                "issues": "https://github.com/SoftCreatR/JSONPath/issues",
+                "source": "https://github.com/SoftCreatR/JSONPath"
+            },
+            "funding": [
+                {
+                    "url": "https://ecologi.com/softcreatr?r=61212ab3fc69b8eb8a2014f4",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/softcreatr",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-06-01T09:15:21+00:00"
+        },
+        {
+            "name": "symfony/deprecation-contracts",
+            "version": "v3.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/deprecation-contracts.git",
+                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/63afe740e99a13ba87ec199bb07bbdee937a5b62",
+                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62",
                 "shasum": ""
             },
             "require": {
@@ -1747,7 +1927,7 @@
                     "name": "symfony/contracts"
                 },
                 "branch-alias": {
-                    "dev-main": "3.5-dev"
+                    "dev-main": "3.6-dev"
                 }
             },
             "autoload": {
@@ -1772,7 +1952,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.5.1"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.6.0"
             },
             "funding": [
                 {
@@ -1788,11 +1968,11 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-25T14:20:29+00:00"
+            "time": "2024-09-25T14:21:43+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.31.0",
+            "version": "v1.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -1851,7 +2031,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.31.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.32.0"
             },
             "funding": [
                 {
@@ -1871,19 +2051,20 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.31.0",
+            "version": "v1.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "85181ba99b2345b0ef10ce42ecac37612d9fd341"
+                "reference": "6d857f4d76bd4b343eac26d6b539585d2bc56493"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/85181ba99b2345b0ef10ce42ecac37612d9fd341",
-                "reference": "85181ba99b2345b0ef10ce42ecac37612d9fd341",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/6d857f4d76bd4b343eac26d6b539585d2bc56493",
+                "reference": "6d857f4d76bd4b343eac26d6b539585d2bc56493",
                 "shasum": ""
             },
             "require": {
+                "ext-iconv": "*",
                 "php": ">=7.2"
             },
             "provide": {
@@ -1931,7 +2112,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.31.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.32.0"
             },
             "funding": [
                 {
@@ -1947,20 +2128,92 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-09T11:45:10+00:00"
+            "time": "2024-12-23T08:48:59+00:00"
         },
         {
-            "name": "twig/twig",
-            "version": "v3.20.0",
+            "name": "symfony/yaml",
+            "version": "v7.3.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/twigphp/Twig.git",
-                "reference": "3468920399451a384bef53cf7996965f7cd40183"
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "cea40a48279d58dc3efee8112634cb90141156c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/3468920399451a384bef53cf7996965f7cd40183",
-                "reference": "3468920399451a384bef53cf7996965f7cd40183",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/cea40a48279d58dc3efee8112634cb90141156c2",
+                "reference": "cea40a48279d58dc3efee8112634cb90141156c2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "symfony/deprecation-contracts": "^2.5|^3.0",
+                "symfony/polyfill-ctype": "^1.8"
+            },
+            "conflict": {
+                "symfony/console": "<6.4"
+            },
+            "require-dev": {
+                "symfony/console": "^6.4|^7.0"
+            },
+            "bin": [
+                "Resources/bin/yaml-lint"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Loads and dumps YAML files",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/yaml/tree/v7.3.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2025-04-04T10:10:33+00:00"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v3.21.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "285123877d4dd97dd7c11842ac5fb7e86e60d81d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/285123877d4dd97dd7c11842ac5fb7e86e60d81d",
+                "reference": "285123877d4dd97dd7c11842ac5fb7e86e60d81d",
                 "shasum": ""
             },
             "require": {
@@ -2014,7 +2267,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.20.0"
+                "source": "https://github.com/twigphp/Twig/tree/v3.21.1"
             },
             "funding": [
                 {
@@ -2026,20 +2279,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-02-13T08:34:43+00:00"
+            "time": "2025-05-03T07:21:55+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v5.6.1",
+            "version": "v5.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "a59a13791077fe3d44f90e7133eb68e7d22eaff2"
+                "reference": "24ac4c74f91ee2c193fa1aaa5c249cb0822809af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/a59a13791077fe3d44f90e7133eb68e7d22eaff2",
-                "reference": "a59a13791077fe3d44f90e7133eb68e7d22eaff2",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/24ac4c74f91ee2c193fa1aaa5c249cb0822809af",
+                "reference": "24ac4c74f91ee2c193fa1aaa5c249cb0822809af",
                 "shasum": ""
             },
             "require": {
@@ -2098,7 +2351,7 @@
             ],
             "support": {
                 "issues": "https://github.com/vlucas/phpdotenv/issues",
-                "source": "https://github.com/vlucas/phpdotenv/tree/v5.6.1"
+                "source": "https://github.com/vlucas/phpdotenv/tree/v5.6.2"
             },
             "funding": [
                 {
@@ -2110,7 +2363,117 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-20T21:52:34+00:00"
+            "time": "2025-04-30T23:37:27+00:00"
+        },
+        {
+            "name": "yosymfony/parser-utils",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yosymfony/parser-utils.git",
+                "reference": "00bec9a12722b21f2baf7f9db35f127e90c162c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yosymfony/parser-utils/zipball/00bec9a12722b21f2baf7f9db35f127e90c162c9",
+                "reference": "00bec9a12722b21f2baf7f9db35f127e90c162c9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yosymfony\\ParserUtils\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Victor Puertas",
+                    "email": "vpgugr@gmail.com",
+                    "homepage": "http://yosymfony.com"
+                }
+            ],
+            "description": "Parser utilities",
+            "homepage": "http://github.com/yosymfony/toml",
+            "keywords": [
+                "lexer",
+                "parser"
+            ],
+            "support": {
+                "issues": "https://github.com/yosymfony/parser-utils/issues",
+                "source": "https://github.com/yosymfony/parser-utils/tree/master"
+            },
+            "time": "2018-06-29T15:31:11+00:00"
+        },
+        {
+            "name": "yosymfony/toml",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yosymfony/toml.git",
+                "reference": "bdab92ad920d0e36810a3a3e4a998d23f3498f8e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yosymfony/toml/zipball/bdab92ad920d0e36810a3a3e4a998d23f3498f8e",
+                "reference": "bdab92ad920d0e36810a3a3e4a998d23f3498f8e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1",
+                "yosymfony/parser-utils": "^2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yosymfony\\Toml\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Victor Puertas",
+                    "email": "vpgugr@gmail.com",
+                    "homepage": "http://yosymfony.com"
+                }
+            ],
+            "description": "A PHP parser for TOML compatible with specification 0.4.0",
+            "homepage": "http://github.com/yosymfony/toml",
+            "keywords": [
+                "mojombo",
+                "parser",
+                "toml"
+            ],
+            "support": {
+                "issues": "https://github.com/yosymfony/toml/issues",
+                "source": "https://github.com/yosymfony/toml/tree/master"
+            },
+            "time": "2018-08-08T15:08:14+00:00"
         }
     ],
     "packages-dev": [],
