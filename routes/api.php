@@ -36,7 +36,7 @@ Route::post('/api/list', function (Request $request, ApiKeyProvider $apiKeyProvi
         } else {
             // replace with proper logging in the future
             file_put_contents('php://stderr', sprintf(
-                '[%s] (%s) Invalid URI "%s".',
+                '[%s] (%s) Invalid URI "%s".' . "\n",
                 date('Y-m-d h:i:s'),
                 $requestType,
                 $uri,
@@ -81,7 +81,7 @@ Route::post('/api/list', function (Request $request, ApiKeyProvider $apiKeyProvi
 
         // replace with proper logging in the future
         file_put_contents('php://stderr', sprintf(
-            '[%s] (%s) Quota exceeded? Attempted to fetch "%s".',
+            '[%s] (%s) Quota exceeded? Attempted to fetch "%s".' . "\n",
             date('Y-m-d h:i:s'),
             $requestType,
             $uri,
