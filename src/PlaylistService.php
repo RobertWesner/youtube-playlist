@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Google\Service\Exception as GoogleException;
 use Google\Service\YouTube;
 
 /**
@@ -9,6 +10,9 @@ use Google\Service\YouTube;
  */
 final class PlaylistService
 {
+    /**
+     * @throws GoogleException
+     */
     public static function getItems(YouTube $youtube, string $list, ?callable $onSlice = null): array
     {
         // https://stackoverflow.com/a/32321633/23756482

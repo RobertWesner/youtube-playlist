@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": "^8.4",
-        "robertwesner/simple-mvc-php": "^v0.10.1",
+        "robertwesner/simple-mvc-php": "^v0.11.1",
         "robertwesner/dependency-injection": "^v1.3.1",
         "google/apiclient": "^2.18",
         "matthiasmullie/scrapbook": "^1.5",

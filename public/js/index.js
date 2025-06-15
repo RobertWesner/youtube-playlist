@@ -76,7 +76,9 @@ window.addEventListener('load', () => {
         )
             .then(response => response.json())
             .then(response => {
-                if (response.status === 'running') {
+                if (response.status === 'error') {
+                    error('Uncaught error! Quota exceeded?');
+                } else if (response.status === 'running') {
                     error('Playlist is very large and will be fetched in the background, please retry in 10 seconds.');
                 } else {
                     items = response.items;

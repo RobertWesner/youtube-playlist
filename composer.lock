@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "32a752ce23701cc008b9efc7ca30b7e3",
+    "content-hash": "1f6ffc38449b149c07da67d440bcf8a6",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -140,7 +140,7 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.397.1",
+            "version": "v0.398.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
@@ -178,7 +178,7 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/google-api-php-client-services/issues",
-                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.397.1"
+                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.398.0"
             },
             "time": "2025-06-04T17:28:44+00:00"
         },
@@ -1214,16 +1214,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "3.0.43",
+            "version": "3.0.44",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "709ec107af3cb2f385b9617be72af8cf62441d02"
+                "reference": "1d0b5e7e1434678411787c5a0535e68907cf82d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/709ec107af3cb2f385b9617be72af8cf62441d02",
-                "reference": "709ec107af3cb2f385b9617be72af8cf62441d02",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/1d0b5e7e1434678411787c5a0535e68907cf82d9",
+                "reference": "1d0b5e7e1434678411787c5a0535e68907cf82d9",
                 "shasum": ""
             },
             "require": {
@@ -1304,7 +1304,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpseclib/phpseclib/issues",
-                "source": "https://github.com/phpseclib/phpseclib/tree/3.0.43"
+                "source": "https://github.com/phpseclib/phpseclib/tree/3.0.44"
             },
             "funding": [
                 {
@@ -1320,7 +1320,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-12-14T21:12:59+00:00"
+            "time": "2025-06-15T09:59:26+00:00"
         },
         {
             "name": "psr/cache",
@@ -1785,16 +1785,16 @@
         },
         {
             "name": "robertwesner/simple-mvc-php",
-            "version": "v0.10.1",
+            "version": "v0.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RobertWesner/simple-mvc-php.git",
-                "reference": "9588e3761b60a125bfe2ac1f5af5b94b2de82c11"
+                "reference": "215b5cbecd2b00b72d899e637a16582e5eb7f194"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobertWesner/simple-mvc-php/zipball/9588e3761b60a125bfe2ac1f5af5b94b2de82c11",
-                "reference": "9588e3761b60a125bfe2ac1f5af5b94b2de82c11",
+                "url": "https://api.github.com/repos/RobertWesner/simple-mvc-php/zipball/215b5cbecd2b00b72d899e637a16582e5eb7f194",
+                "reference": "215b5cbecd2b00b72d899e637a16582e5eb7f194",
                 "shasum": ""
             },
             "require": {
@@ -1830,28 +1830,28 @@
             "description": "A small library for creating PHP web servers.",
             "support": {
                 "issues": "https://github.com/RobertWesner/simple-mvc-php/issues",
-                "source": "https://github.com/RobertWesner/simple-mvc-php/tree/v0.10.1"
+                "source": "https://github.com/RobertWesner/simple-mvc-php/tree/v0.11.1"
             },
-            "time": "2025-06-04T17:44:01+00:00"
+            "time": "2025-06-15T14:27:51+00:00"
         },
         {
             "name": "robertwesner/simple-mvc-php-spawner-bundle",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RobertWesner/simple-mvc-php-spawner-bundle.git",
-                "reference": "323b24cc5424e40fa6321060f01fb62302d6cf82"
+                "reference": "41b7b6060cc92c38d5e0fd1dd67d9dec3462822a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobertWesner/simple-mvc-php-spawner-bundle/zipball/323b24cc5424e40fa6321060f01fb62302d6cf82",
-                "reference": "323b24cc5424e40fa6321060f01fb62302d6cf82",
+                "url": "https://api.github.com/repos/RobertWesner/simple-mvc-php-spawner-bundle/zipball/41b7b6060cc92c38d5e0fd1dd67d9dec3462822a",
+                "reference": "41b7b6060cc92c38d5e0fd1dd67d9dec3462822a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.4",
                 "robertwesner/dependency-injection": "^v1.3.0",
-                "robertwesner/simple-mvc-php": "^0.10.1"
+                "robertwesner/simple-mvc-php": "^0.10.1 || ^0.11.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^11.3.1",
@@ -1874,11 +1874,12 @@
                     "email": "robert@wesner.io"
                 }
             ],
+            "description": "Run background tasks that do not produce synchronous output or require monitoring.",
             "support": {
                 "issues": "https://github.com/RobertWesner/simple-mvc-php-spawner-bundle/issues",
-                "source": "https://github.com/RobertWesner/simple-mvc-php-spawner-bundle/tree/v1.0.0"
+                "source": "https://github.com/RobertWesner/simple-mvc-php-spawner-bundle/tree/v1.0.1"
             },
-            "time": "2025-06-07T14:26:15+00:00"
+            "time": "2025-06-08T14:34:53+00:00"
         },
         {
             "name": "softcreatr/jsonpath",

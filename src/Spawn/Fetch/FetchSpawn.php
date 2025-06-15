@@ -6,6 +6,7 @@ use App\ApiKeyProvider;
 use App\PlaylistCache;
 use App\PlaylistService;
 use Google\Client;
+use Google\Service\Exception as GoogleException;
 use Google\Service\YouTube;
 use RobertWesner\SimpleMvcPhpSpawnerBundle\Spawner\SpawnConfigurationInterface;
 use RobertWesner\SimpleMvcPhpSpawnerBundle\Spawner\SpawnInterface;
@@ -29,11 +30,16 @@ final readonly class FetchSpawn implements SpawnInterface
             'time' => (int)gmdate('U'),
             'items' => [],
         ]);
-        PlaylistService::getItems($youtube, $list, function (array $items) use ($cache, $list) {
-            $cache->set($list, [
-                'time' => (int)gmdate('U'),
-                'items' => $items,
-            ]);
-        });
+        try {
+            PlaylistService::getItems($youtube, $list, function (array $items) use ($cache, $list) {
+                $cache->set($list, [
+                    'time' => (int)gmdate('U'),
+                    'items' => $items,
+                ]);
+            });
+        } catch (GoogleException) {
+            // add proper logging in the future
+            $cache->delete($list);
+        }
     }
 }
