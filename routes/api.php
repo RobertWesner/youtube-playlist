@@ -47,6 +47,23 @@ Route::post('/api/list', function (Request $request, ApiKeyProvider $apiKeyProvi
             ], 400);
         }
 
+        // prevent private lists like WL
+        if (strlen($list) <= 4) {
+            // replace with proper logging in the future
+            file_put_contents('php://stderr', sprintf(
+                '[%s] (%s) Attempted access to short playlist "%s".' . "\n",
+                date('Y-m-d h:i:s'),
+                $requestType,
+                $uri,
+            ));
+
+            return Route::json([
+                'status' => 'fetched',
+                'uri' => $uri,
+                'items' => [],
+            ]);
+        }
+
         $cache = PlaylistCache::getInstance()->getCache();
         $cached = $cache->get($list);
         // Cache for 10 minutes to prevent exhausting the API key
