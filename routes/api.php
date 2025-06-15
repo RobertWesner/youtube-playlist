@@ -20,6 +20,8 @@ Route::post('/api/list', function (Request $request, ApiKeyProvider $apiKeyProvi
         ], 400);
     }
 
+    $requestType = $request->getRequestParameter('requestType', 'unknown');
+
     $list = null;
     try {
         $client = new Client();
@@ -34,8 +36,9 @@ Route::post('/api/list', function (Request $request, ApiKeyProvider $apiKeyProvi
         } else {
             // replace with proper logging in the future
             file_put_contents('php://stderr', sprintf(
-                '[%s] Invalid URI "%s".',
+                '[%s] (%s) Invalid URI "%s".',
                 date('Y-m-d h:i:s'),
+                $requestType,
                 $uri,
             ));
 
@@ -78,8 +81,9 @@ Route::post('/api/list', function (Request $request, ApiKeyProvider $apiKeyProvi
 
         // replace with proper logging in the future
         file_put_contents('php://stderr', sprintf(
-            '[%s] Quota exceeded? Attempted to fetch "%s".',
+            '[%s] (%s) Quota exceeded? Attempted to fetch "%s".',
             date('Y-m-d h:i:s'),
+            $requestType,
             $uri,
         ));
 

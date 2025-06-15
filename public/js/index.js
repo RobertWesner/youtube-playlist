@@ -71,7 +71,10 @@ window.addEventListener('load', () => {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ uri: playlist })
+                body: JSON.stringify({
+                    uri: playlist,
+                    requestType: 'web',
+                })
             }
         )
             .then(response => response.json())
