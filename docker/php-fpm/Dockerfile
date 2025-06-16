@@ -21,4 +21,6 @@ RUN composer update
 
 RUN echo "access.log = /dev/null" >> /usr/local/etc/php-fpm.d/www.conf
 
+RUN mkdir -p /var/cache/ytplaylist && chown -R www-data:www-data /var/cache/ytplaylist
+
 CMD ["/run.sh"]
