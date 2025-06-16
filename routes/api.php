@@ -22,6 +22,13 @@ Route::post('/api/list', function (Request $request, ApiKeyProvider $apiKeyProvi
 
     $requestType = $request->getRequestParameter('requestType', 'unknown');
 
+    file_put_contents('php://stderr', sprintf(
+        '[%s] (%s) Attempting to fetch URI "%s".' . "\n",
+        date('Y-m-d h:i:s'),
+        $requestType,
+        $uri,
+    ));
+
     $list = null;
     try {
         $client = new Client();

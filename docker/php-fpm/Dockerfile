@@ -19,4 +19,6 @@ WORKDIR /var/www/html
 RUN git config --global --add safe.directory '*'
 RUN composer update
 
+RUN echo "access.log = /dev/null" >> /usr/local/etc/php-fpm.d/www.conf
+
 CMD ["/run.sh"]
