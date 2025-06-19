@@ -8,6 +8,5 @@ $server = [
     'uri' => $_SERVER['REQUEST_URI'],
 ];
 
-Route::get('/', function () use ($server) {
-    return Route::render('index.twig', ['server' => $server]);
-});
+Route::get('/', fn () => Route::render('index.twig', ['server' => $server]));
+Route::get('/(data|privacy|contact)/?', fn () => Route::render('data.twig', ['server' => $server]));

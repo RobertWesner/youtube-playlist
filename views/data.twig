@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% include 'base/head.twig' with { title: 'YouTube Playlist Viewer' } %}
+    </head>
+    <body class="bg-light p-3">
+        <main class="container bg-white rounded rounded-3 shadow-sm p-3">
+            <h1>Data collection and privacy</h1>
+            <section>
+                <h2>Privacy</h2>
+                <div class="alert alert-info">
+                    This service uses calls to the YouTube Data API.
+                </div>
+                <p>This service does not share any personal data with third parties.</p>
+                <p>
+                    Any personal data transferred to the service may temporarily be limited and available in memory as access logs,
+                    which are used to identify and prevent malicious actors. No information is stored or kept on disk for future use.
+                </p>
+                <p>
+                    Instances of data, personal or otherwise, logged temporarily by this service are:
+                </p>
+                <ul>
+                    <li>Accessed server URI (e.g., <code>/api/list</code>) even for missing (404) pages</li>
+                    <li>Playlist ID</li>
+                    <li>User agent</li>
+                </ul>
+                <p>
+                    <strong>None of this data is shared with third party</strong> except "<strong>Playlist ID</strong>", which is
+                    by necessity shared with YouTube.com to access playlist information.
+                </p>
+                <p>
+                    <b>No IPv4 or IPv6</b> information is logged or shared.
+                </p>
+                <p>
+                    This service does not identify users by their requests, as all calls are anonymous.
+                </p>
+                <p>
+                    No Google log-in is required or optional for the usage of this tool.
+                    No Google account information will or can be obtained or used by this tool.
+                </p>
+                <p>
+                    This service does not place any data on your device besides the PHP session cookie, which is
+                    necessary. No first or third party <b>tracking</b> cookies or local storage are used or abused when accessing information
+                    with or on this website. By using or viewing this website, you agree to this usage.
+                </p>
+            </section>
+            <section>
+                <h2>Terms of use and user agreements</h2>
+                <div class="alert alert-info">
+                    By using this service, you agree to <a href="https://www.youtube.com/t/terms">YouTube's Terms of Service</a>,
+                    <a href="http://www.google.com/policies/privacy">Google's Privacy Policy</a>, and this website's policies and terms.
+                </div>
+            </section>
+            <section>
+                <h2>Contact</h2>
+                <p>For further inquiry, contact me via email only if you are, in fact, a human:</p>
+                <p><img class="border border-2 rounded rounded-2" src="/mail.png" style="height: 2em" alt=""></p>
+            </section>
+            <section>
+                <p>
+                    Done reading? <a href="/">Return to main page.</a>
+                </p>
+            </section>
+        </main>
+    </body>
+</html>
