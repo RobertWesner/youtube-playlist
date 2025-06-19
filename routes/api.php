@@ -86,9 +86,23 @@ Route::post('/api/list', function (Request $request, ApiKeyProvider $apiKeyProvi
             'items' => [],
         ]);
 
-        $videoCount = $youtube->playlists->listPlaylists('contentDetails', [
+        $videoCount = ($youtube->playlists->listPlaylists('contentDetails', [
             'id' => $list,
-        ])->getItems()[0]->getContentDetails()->getItemCount();
+        ])->getItems()[0] ?? null)?->getContentDetails()?->getItemCount();
+        if ($videoCount === null) {
+            // replace with proper logging in the future
+            file_put_contents('php://stderr', sprintf(
+                '[%s] (%s) Missing or private playlist? Attempted to fetch "%s".' . "\n",
+                date('Y-m-d H:i:s'),
+                $requestType,
+                $uri,
+            ));
+
+            return Route::json([
+                'status' => 'bad-request',
+            ], 400);
+        }
+
         if ($videoCount >= 1000) {
             $spawner->spawn(FetchSpawn::class, new FetchSpawnConfiguration($list));
 
