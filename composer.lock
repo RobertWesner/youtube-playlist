@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f6ffc38449b149c07da67d440bcf8a6",
+    "content-hash": "01fa2e2bf36711b92814bbe0b3c99299",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -1785,16 +1785,16 @@
         },
         {
             "name": "robertwesner/simple-mvc-php",
-            "version": "v0.11.1",
+            "version": "v0.11.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RobertWesner/simple-mvc-php.git",
-                "reference": "215b5cbecd2b00b72d899e637a16582e5eb7f194"
+                "reference": "8c9fc9df5bdb64823de94cdd06b7269fa260e432"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobertWesner/simple-mvc-php/zipball/215b5cbecd2b00b72d899e637a16582e5eb7f194",
-                "reference": "215b5cbecd2b00b72d899e637a16582e5eb7f194",
+                "url": "https://api.github.com/repos/RobertWesner/simple-mvc-php/zipball/8c9fc9df5bdb64823de94cdd06b7269fa260e432",
+                "reference": "8c9fc9df5bdb64823de94cdd06b7269fa260e432",
                 "shasum": ""
             },
             "require": {
@@ -1830,9 +1830,9 @@
             "description": "A small library for creating PHP web servers.",
             "support": {
                 "issues": "https://github.com/RobertWesner/simple-mvc-php/issues",
-                "source": "https://github.com/RobertWesner/simple-mvc-php/tree/v0.11.1"
+                "source": "https://github.com/RobertWesner/simple-mvc-php/tree/v0.11.2"
             },
-            "time": "2025-06-15T14:27:51+00:00"
+            "time": "2025-06-19T09:34:03+00:00"
         },
         {
             "name": "robertwesner/simple-mvc-php-spawner-bundle",
@@ -2523,7 +2523,92 @@
             "time": "2018-08-08T15:08:14+00:00"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "squizlabs/php_codesniffer",
+            "version": "3.13.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer.git",
+                "reference": "5b5e3821314f947dd040c70f7992a64eac89025c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/5b5e3821314f947dd040c70f7992a64eac89025c",
+                "reference": "5b5e3821314f947dd040c70f7992a64eac89025c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-simplexml": "*",
+                "ext-tokenizer": "*",
+                "ext-xmlwriter": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.3.4"
+            },
+            "bin": [
+                "bin/phpcbf",
+                "bin/phpcs"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Sherwood",
+                    "role": "Former lead"
+                },
+                {
+                    "name": "Juliette Reinders Folmer",
+                    "role": "Current lead"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/PHPCSStandards/PHP_CodeSniffer/graphs/contributors"
+                }
+            ],
+            "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
+            "homepage": "https://github.com/PHPCSStandards/PHP_CodeSniffer",
+            "keywords": [
+                "phpcs",
+                "standards",
+                "static analysis"
+            ],
+            "support": {
+                "issues": "https://github.com/PHPCSStandards/PHP_CodeSniffer/issues",
+                "security": "https://github.com/PHPCSStandards/PHP_CodeSniffer/security/policy",
+                "source": "https://github.com/PHPCSStandards/PHP_CodeSniffer",
+                "wiki": "https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/PHPCSStandards",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/jrfnl",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/php_codesniffer",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://thanks.dev/u/gh/phpcsstandards",
+                    "type": "thanks_dev"
+                }
+            ],
+            "time": "2025-06-17T22:17:01+00:00"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {},

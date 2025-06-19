@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use App\ApiKeyProvider;
 use App\PlaylistCache;
 use App\PlaylistService;
@@ -30,6 +32,7 @@ Route::post('/api/list', function (Request $request, ApiKeyProvider $apiKeyProvi
     ));
 
     $list = null;
+    $cache = PlaylistCache::getInstance()->getCache();
     try {
         $client = new Client();
         $client->setDeveloperKey($apiKeyProvider->getApiKey());
@@ -37,7 +40,13 @@ Route::post('/api/list', function (Request $request, ApiKeyProvider $apiKeyProvi
 
         $matches = [];
         if (preg_match('/https:\/\/(?:m|www)\.youtube\.com\/(@[^\/?#]+).*/', $uri, $matches)) {
-            $list = 'UULF' . substr($youtube->channels->listChannels('id', ['forHandle' => $matches[1]])->getItems()[0]['id'], 2);
+            $list = 'UULF' . substr(
+                $youtube->channels->listChannels(
+                    'id',
+                    ['forHandle' => $matches[1]]
+                )->getItems()[0]['id'],
+                2
+            );
         } elseif (preg_match('/https:\/\/(?:m|www)\.youtube\.com\/playlist.*?(?:\?|&)list=([^&]+)/', $uri, $matches)) {
             $list = $matches[1];
         } else {
@@ -71,7 +80,6 @@ Route::post('/api/list', function (Request $request, ApiKeyProvider $apiKeyProvi
             ]);
         }
 
-        $cache = PlaylistCache::getInstance()->getCache();
         $cached = $cache->get($list);
         // Cache for 10 minutes to prevent exhausting the API key
         if ($cached !== false && $cached['time'] >= (int)gmdate('U') - 600) {
