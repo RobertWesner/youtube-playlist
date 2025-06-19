@@ -21,7 +21,8 @@
         "google/apiclient": "^2.18",
         "matthiasmullie/scrapbook": "^1.5",
         "league/flysystem-local": "^3.29",
-        "robertwesner/simple-mvc-php-spawner-bundle": "^1.0"
+        "robertwesner/simple-mvc-php-spawner-bundle": "^1.0",
+        "robertwesner/simple-mvc-php-monolog-bundle": "^1.0"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.10.2"

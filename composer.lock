@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "01fa2e2bf36711b92814bbe0b3c99299",
+    "content-hash": "03bebf63edbb058f2eeda49a3c299431",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -1833,6 +1833,54 @@
                 "source": "https://github.com/RobertWesner/simple-mvc-php/tree/v0.11.2"
             },
             "time": "2025-06-19T09:34:03+00:00"
+        },
+        {
+            "name": "robertwesner/simple-mvc-php-monolog-bundle",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RobertWesner/simple-mvc-php-monolog-bundle.git",
+                "reference": "52c534b1a0503f41069c6f6bf216eb07a4221d5e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RobertWesner/simple-mvc-php-monolog-bundle/zipball/52c534b1a0503f41069c6f6bf216eb07a4221d5e",
+                "reference": "52c534b1a0503f41069c6f6bf216eb07a4221d5e",
+                "shasum": ""
+            },
+            "require": {
+                "monolog/monolog": "^3.9.0",
+                "php": ">=8.4",
+                "robertwesner/dependency-injection": "^v1.3.0",
+                "robertwesner/simple-mvc-php": "^0.10.1 || ^0.11.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^11.3.1",
+                "squizlabs/php_codesniffer": "^3.10.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RobertWesner\\SimpleMvcPhpMonologBundle\\": "src/",
+                    "RobertWesner\\SimpleMvcPhpMonologBundle\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "RobertWesner",
+                    "email": "robert@wesner.io"
+                }
+            ],
+            "description": "Monolog integration for robertwesner/simple-mvc-php.",
+            "support": {
+                "issues": "https://github.com/RobertWesner/simple-mvc-php-monolog-bundle/issues",
+                "source": "https://github.com/RobertWesner/simple-mvc-php-monolog-bundle/tree/v1.0.0"
+            },
+            "time": "2025-06-19T13:12:45+00:00"
         },
         {
             "name": "robertwesner/simple-mvc-php-spawner-bundle",
